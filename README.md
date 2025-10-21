@@ -16,18 +16,18 @@ The app captures live video from your webcam, detects objects, and recognizes em
 ## 📂 Project Structure
 ```
 Object-and-Emotion-Recognition-Project/
-│── app.py # Main Flask app
-│── requirements.txt # Project dependencies
-│── README.md # Project documentation
+│── app.py              # Main Flask app
+│── requirements.txt    # Project dependencies
+│── README.md           # Project documentation
 │── templates/
-│ └── index.html # Frontend UI
+│ └── index.html        # Frontend UI
 │── static/
 │ └── css/
-│ └── styles.css # Custom styling
+│ └── styles.css        # Custom styling
 │── data/
-│ ├── yolov3.weights # YOLO pre-trained weights
-│ ├── yolov3.cfg # YOLO configuration
-│ └── coco.names # Class labels
+│ ├── yolov3.weights    # YOLO pre-trained weights
+│ ├── yolov3.cfg        # YOLO configuration
+│ └── coco.names        # Class labels
 ```
 
 
