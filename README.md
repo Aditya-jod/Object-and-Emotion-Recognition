@@ -5,7 +5,7 @@ The app captures live video from your webcam, detects objects, and recognizes em
 
 ---
 
-## 🚀 Features
+## Features
 - Real-time object detection with **YOLOv3**
 - Emotion recognition on detected faces
 - Web-based interface with **Flask**
@@ -13,7 +13,7 @@ The app captures live video from your webcam, detects objects, and recognizes em
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```
 Object-and-Emotion-Recognition-Project/
 │── app.py              # Main Flask app
@@ -33,7 +33,7 @@ Object-and-Emotion-Recognition-Project/
 
 ---
 
-## ⚡ Installation
+## Installation
 
 1. Clone the repository:
    ```bash
