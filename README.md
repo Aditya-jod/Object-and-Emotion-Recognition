@@ -20,14 +20,16 @@ Object-and-Emotion-Recognition-Project/
 │── requirements.txt    # Project dependencies
 │── README.md           # Project documentation
 │── templates/
-│ └── index.html        # Frontend UI
+│   └── index.html      # Frontend UI
 │── static/
-│ └── css/
-│ └── styles.css        # Custom styling
+│   └── css/
+│       ├── styles.css  # Custom styling
+│       └── js/
+│           └── script.js # Frontend logic
 │── data/
-│ ├── yolov3.weights    # YOLO pre-trained weights
-│ ├── yolov3.cfg        # YOLO configuration
-│ └── coco.names        # Class labels
+│   ├── yolov3.weights  # YOLO pre-trained weights
+│   ├── yolov3.cfg      # YOLO configuration
+│   └── coco.names      # Class labels
 ```
 
 
