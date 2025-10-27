@@ -108,7 +108,8 @@ def generate_frames():
                 continue
 
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
+            # 1. Tuned face detection parameters for better accuracy
+            faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
 
             for (x, y, w, h) in faces:
                 face_img = frame[y:y + h, x:x + w]
@@ -143,7 +144,8 @@ def generate_frames():
                     scores = detection[5:]
                     class_id = np.argmax(scores)
                     confidence = scores[class_id]
-                    if confidence > 0.5:
+                    # 2. Lowered confidence to detect more objects. You can adjust this value.
+                    if confidence > 0.45:
                         center_x, center_y = int(detection[0] * frame.shape[1]), int(detection[1] * frame.shape[0])
                         w, h = int(detection[2] * frame.shape[1]), int(detection[3] * frame.shape[0])
                         x, y = int(center_x - w / 2), int(center_y - h / 2)
@@ -168,9 +170,9 @@ def generate_frames():
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
                     
                     # Save detection details to a text file
-                    detections_file = os.path.join(DATA_DIR, "detections.txt")
-                    with open(detections_file, "a") as f:
-                       f.write(f"{label} at x={x}, y={y}, w={w}, h={h}\n")
+                    # detections_file = os.path.join(DATA_DIR, "detections.txt")
+                    # with open(detections_file, "a") as f:
+                    #    f.write(f"{label} at x={x}, y={y}, w={w}, h={h}\n")
 
             ret, buffer = cv2.imencode(".jpg", frame)
             if not ret:
