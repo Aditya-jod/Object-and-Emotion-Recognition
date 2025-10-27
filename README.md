@@ -35,7 +35,31 @@ Object-and-Emotion-Recognition-Project/
 
 ## Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/Aditya-jod/object-emotion-recognition.git
    cd object-emotion-recognition
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Download YOLOv3 Weights:**
+   The `yolov3.weights` file is required but not included in the repository due to its size. Download it and place it in the `data/` folder.
+
+   *   **On Windows (using PowerShell):**
+       ```powershell
+       Invoke-WebRequest -Uri https://pjreddie.com/media/files/yolov3.weights -OutFile "data\yolov3.weights"
+       ```
+   *   **On Linux/macOS:**
+       ```bash
+       wget -P data/ https://pjreddie.com/media/files/yolov3.weights
+       ```
+
+4. **Run the application:**
+   ```bash
+   python app.py
+   ```
+   Open your browser and navigate to `http://127.0.0.1:5000`.
