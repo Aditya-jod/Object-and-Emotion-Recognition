@@ -13,6 +13,16 @@ The app captures live video from your webcam, detects objects, and recognizes em
 
 ---
 
+## 💡 Performance & Accuracy Notes
+
+To improve real-time performance and detection accuracy, several optimizations have been made:
+
+-   **Improved Performance:** The application no longer writes detection results to a file on every frame. This significantly reduces I/O overhead and prevents lag, resulting in a smoother video feed.
+-   **Tuned Face Detection:** The `scaleFactor` for the Haar Cascade face detector has been adjusted for more reliable face detection.
+-   **Adjusted YOLO Confidence:** The confidence threshold for YOLO object detection is set to `0.45`. This value can be tuned in `app.py` to balance between detecting more objects and reducing false positives.
+
+---
+
 ## Project Structure
 
 ```
