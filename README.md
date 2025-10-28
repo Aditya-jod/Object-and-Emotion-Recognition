@@ -13,7 +13,7 @@ The app captures live video from your webcam, detects objects, and recognizes em
 
 ---
 
-## 💡 Performance & Accuracy Notes
+## Performance & Accuracy Notes
 
 To improve real-time performance and detection accuracy, several optimizations have been made:
 
